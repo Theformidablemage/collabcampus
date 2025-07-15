@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CollabCampus – Dashboard</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css" />
+  <script type="module" src="js/firebase-config.js"></script>
+  <script type="module" src="js/dashboard.js"></script>
+</head>
+<body>
+  <div class="container dash">
+    <header>
+      <h2 id="profileHeader">Logged in as …</h2>
+      <button id="logoutBtn">Logout</button>
+    </header>
+
+    <section>
+      <h3>Your Skills / Interests</h3>
+      <div id="skillsContainer" class="tag-box"></div>
+      <div id="skillEntryBox">
+        <input type="text" id="skillsInput" placeholder="Add skills (comma‑separated)" />
+        <button id="saveSkillsBtn">Save</button>
+      </div>
+    </section>
+
+    <section>
+      <h3>Your Collaboration Goals</h3>
+      <div id="goalsContainer" class="tag-box"></div>
+      <div id="goalEntryBox">
+        <input type="text" id="goalsInput" placeholder="Looking for (comma‑separated)" />
+        <button id="saveGoalsBtn">Save</button>
+      </div>
+    </section>
+
+    <section>
+      <h3>Reputation Points: <span id="pointsSpan">0</span></h3>
+    </section>
+
+    <button id="findBtn" class="cta">🔍 Find Collaborators</button>
+    <p id="dashMsg" class="msg"></p>
+  </div>
+</body>
+</html>
